@@ -1,0 +1,385 @@
+// Colors
+$intro-blue: hsl(217, 28%, 15%);
+$main-blue: hsl(218, 28%, 13%);
+$footer-blue: hsl(216, 53%, 9%);
+$testimonials-blue: hsl(219, 30%, 18%);
+
+$cyan: hsl(176, 68%, 64%);
+$blue: hsl(198, 60%, 50%);
+
+$btn-gradient: linear-gradient(to right, $cyan, $blue 90%);
+
+$white: hsl(0, 0%, 100%);
+
+// Fonts
+$raleway-font: "Raleway", sans-serif; // Headings, Call-to-actions, Header Navigation
+$open-sans-font: "Open Sans", sans-serif; // Body
+
+// ------------------------Reset
+body,
+html,
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+}
+ul,
+li {
+  display: block;
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+// --------------------General Style
+body {
+  color: $white;
+  background: $main-blue;
+  line-height: 1.6;
+}
+button,
+a {
+  color: $white;
+  transition: 0.3s;
+}
+a:hover {
+  color: $cyan;
+}
+
+.container {
+  max-width: 85%;
+  margin: auto;
+}
+
+body,
+.text,
+.text-small,
+a {
+  font-family: $open-sans-font;
+  font-weight: 400;
+  font-size: 14px;
+}
+.text-small {
+  font-size: 12px;
+}
+.heading,
+.btn,
+.header-nav {
+  font-family: $raleway-font;
+  font-weight: 700;
+}
+
+.btn {
+  padding: 20px 95px;
+  border-radius: 50px;
+  text-align: center;
+  background: $btn-gradient;
+  border: none;
+}
+header,
+section {
+  padding-bottom: 125px;
+}
+.logo {
+  span {
+    position: absolute;
+    left: -500px;
+  }
+  img {
+    margin-top: 10px;
+  }
+}
+
+// FIRST SCREEN. HEADER
+header {
+  background: $intro-blue url(images/bg-curvy-desktop.svg) no-repeat;
+  background-size: contain;
+  background-position: bottom center;
+
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 15vh;
+
+    .menu {
+      display: flex;
+      margin-left: auto;
+      li {
+        margin-left: 55px;
+      }
+    }
+  }
+
+  .header-content {
+    text-align: center;
+    width: 47%;
+    margin: auto;
+    .header-image {
+      object-fit: contain;
+      width: 100%;
+      height: auto;
+    }
+    .heading {
+      margin-top: 30px;
+      margin-bottom: 35px;
+    }
+    .btn {
+      margin-top: 30px;
+    }
+  }
+}
+
+//   FEATURES SECTION
+.features-container {
+  width: 87%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .feature {
+    text-align: center;
+    width: 70%;
+    margin: 43px auto;
+    .feature__icon {
+      margin-bottom: 22px;
+      height: 65px;
+      width: auto;
+    }
+    .feature__title {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+  }
+}
+
+//  DESCRIPTION SECTION
+.description-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  .description-image {
+    width: 50%;
+    height: auto;
+  }
+
+  .description-content {
+    padding-left: 50px;
+    .heading {
+      font-size: 30px;
+      margin-bottom: 22px;
+      padding-right: 25%;
+    }
+    p {
+      margin-bottom: 16px;
+    }
+    .link {
+      color: $cyan;
+      border-bottom: 1px solid $cyan;
+      padding-bottom: 6px;
+      display: inline-flex;
+      align-items: center;
+      transition: 0.3s;
+      &:after {
+        content: "";
+        background: url(images/icon-arrow.svg);
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-left: 6px;
+        margin-top: 2px;
+      }
+      &:hover {
+        text-shadow: 0 0 4px $cyan;
+      }
+    }
+  }
+}
+
+//  TESTIMONIALS
+.testimonials-section {
+  padding-bottom: 0px;
+}
+
+.testimonials-container {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  &:before {
+    content: "";
+    background: url(images/bg-quotes.png) no-repeat;
+    background-size: contain;
+    width: 55px;
+    height: 52px;
+    color: $cyan;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: -52px;
+  }
+  .testimonial {
+    box-sizing: border-box;
+    width: 30%;
+    background-color: $testimonials-blue;
+    border-radius: 5px;
+    padding: 40px 25px 25px;
+  }
+  .testimonial__author {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    .testimonial__author-avatar {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    div > span {
+      display: block;
+    }
+    .testimonial__author-name {
+      font-size: 10px;
+      font-weight: bold;
+      color: $cyan;
+    }
+    .testimonial__author-desc {
+      font-size: 8px;
+    }
+  }
+}
+
+//  NEWSLETTER SECTION
+.newsletter-section {
+  padding-bottom: 0;
+}
+
+.newsletter-box {
+  max-width: 860px;
+  top: 125px;
+  margin: auto;
+  text-align: center;
+  background: $intro-blue;
+  border-radius: 7px;
+  padding: 45px 75px;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  position: relative;
+  z-index: 100;
+
+  .heading {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  .text-small {
+    width: 85%;
+    margin: auto;
+  }
+  .newsletter-form {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: minmax(200px, 2.4fr) minmax(200px, 1fr);
+    input {
+      padding: 18px 30px;
+      border-radius: 50px;
+      border: none;
+      margin-right: 10px;
+      transition: 0.4s;
+      &:focus {
+        box-shadow: 0 0 4px 1px $blue;
+      }
+    }
+    .newsletter-form__subbmit {
+      padding: 18px 30px;
+      margin-left: auto;
+      min-width: 200px;
+    }
+  }
+}
+
+// MAIN FOOTER
+.footer {
+  position: fixed;
+  bottom: 0;
+}
+.main-footer {
+  background-color: $footer-blue;
+  padding-top: 250px;
+  position: relative;
+
+  padding-bottom: 85px;
+}
+
+.footer-content {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+
+  .footer-icon {
+    height: 25px;
+    margin-right: 20px;
+  }
+
+  .footer-location {
+    position: relative;
+    width: 25%;
+    .text-small {
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding-left: 40px;
+    }
+  }
+
+  .footer-contacts {
+    span {
+      display: block;
+      margin-bottom: 8px;
+    }
+  }
+
+  .footer-nav {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    ul {
+      display: block;
+      li {
+        font-size: 10px;
+        margin-bottom: 16px;
+        a {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  .footer-socials {
+    li {
+      display: inline-block;
+      border: 1px solid $white;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      margin-left: 10px;
+      transition: 0.3s;
+      &:hover {
+        border-color: $cyan;
+      }
+      a {
+        display: block;
+        line-height: 30px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.frontendmentor-footer {
+  background-color: darken($color: $footer-blue, $amount: 2);
+  text-align: center;
+  padding: 40px;
+  font-size: 12px;
+}

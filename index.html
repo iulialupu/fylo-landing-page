@@ -16,6 +16,11 @@
       integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>
       Frontend Mentor | Fylo landing page with dark theme and features grid
     </title>
@@ -26,16 +31,18 @@
       <div class="container">
         <nav class="header-nav">
           <a href="#" class="logo"
-            >Fylo
+            ><span>Fylo</span>
             <img src="./images/logo.svg" alt="Fylo logo" />
           </a>
           <ul class="menu">
-            <li class="menu__item">Features</li>
-            <li class="menu__item">Team</li>
-            <li class="menu__item">Sign In</li>
+            <li class="menu__item"><a href="#feature-section">Features</a></li>
+            <li class="menu__item"><a href="#description-section">Team</a></li>
+            <li class="menu__item">
+              <a href="#newsletter-section">Sign In</a>
+            </li>
           </ul>
         </nav>
-        <div class="header-conntent">
+        <div class="header-content">
           <img
             class="header-image"
             src="./images/illustration-intro.png"
@@ -56,7 +63,7 @@
 
     <main>
       <!-- FEATURES SECTION -->
-      <section class="feature-section">
+      <section class="feature-section" id="feature-section">
         <div class="container">
           <div class="features-container">
             <!-- 1 -->
@@ -66,7 +73,9 @@
                 src="images/icon-access-anywhere.svg"
                 alt="Access Your Files Anywhere"
               />
-              <h3 class="feature__title ">Access your files, anywhere</h3>
+              <h3 class="feature__title heading">
+                Access your files, anywhere
+              </h3>
               <p class="feature__text text">
                 The ability to use a smartphone, tablet, or computer to access
                 your account means your files follow you everywhere.
@@ -80,7 +89,7 @@
                 src="images/icon-security.svg"
                 alt="Security"
               />
-              <h3 class="feature__title">Security you can trust</h3>
+              <h3 class="feature__title heading">Security you can trust</h3>
               <p class="feature__text text">
                 2-factor authentication and user-controlled encryption are just
                 a couple of the security features we allow to help secure your
@@ -95,7 +104,7 @@
                 src="images/icon-collaboration.svg"
                 alt="Collaboration"
               />
-              <h3 class="feature__title">Real-time collaboration</h3>
+              <h3 class="feature__title heading">Real-time collaboration</h3>
               <p class="feature__text text">
                 Securely share files and folders with friends, family and
                 colleagues for live collaboration. No email attachments
@@ -110,7 +119,7 @@
                 src="images/icon-any-file.svg"
                 alt="Any Type of Files"
               />
-              <h3 class="feature__title title">Store any type of file</h3>
+              <h3 class="feature__title heading">Store any type of file</h3>
               <p class="feature__text text">
                 Whether you're sharing holidays photos or work documents, Fylo
                 has you covered allowing for all file types to be securely
@@ -122,7 +131,7 @@
       </section>
 
       <!-- DESCRIPTION SECTION -->
-      <section class="description-section">
+      <section class="description-section" id="description-section">
         <div class="container">
           <div class="description-container">
             <img
@@ -168,10 +177,12 @@
                   alt="avatar"
                   class="testimonial__author-avatar"
                 />
-                <span class="testimonial__author-name">Satish Patel</span>
-                <span class="testimonial__author-desc"
-                  >Founder & CEO, Huddle</span
-                >
+                <div>
+                  <span class="testimonial__author-name">Satish Patel</span>
+                  <span class="testimonial__author-desc"
+                    >Founder & CEO, Huddle</span
+                  >
+                </div>
               </div>
             </div>
 
@@ -188,10 +199,12 @@
                   alt="avatar"
                   class="testimonial__author-avatar"
                 />
-                <span class="testimonial__author-name">Bruce McKenzie</span>
-                <span class="testimonial__author-desc"
-                  >Founder & CEO, Huddle</span
-                >
+                <div>
+                  <span class="testimonial__author-name">Bruce McKenzie</span>
+                  <span class="testimonial__author-desc"
+                    >Founder & CEO, Huddle</span
+                  >
+                </div>
               </div>
             </div>
 
@@ -208,10 +221,12 @@
                   alt="avatar"
                   class="testimonial__author-avatar"
                 />
-                <span class="testimonial__author-name">Iva Boyd</span>
-                <span class="testimonial__author-desc"
-                  >Founder & CEO, Huddle</span
-                >
+                <div>
+                  <span class="testimonial__author-name">Iva Boyd</span>
+                  <span class="testimonial__author-desc"
+                    >Founder & CEO, Huddle</span
+                  >
+                </div>
               </div>
             </div>
           </div>
@@ -219,7 +234,7 @@
       </section>
 
       <!-- NEWSLETTER SECTION -->
-      <section class="newsletter-section">
+      <section class="newsletter-section" id="newsletter-section">
         <div class="container">
           <div class="newsletter-box">
             <h3 class="heading">Get early access today</h3>
@@ -235,11 +250,9 @@
                 class="newsletter-form__input"
                 placeholder="email@example.com"
               />
-              <input
-                type="submit"
-                value="Get Started For Free"
-                class="newsletter-form__subbmit btn"
-              />
+              <button type="submit" class="newsletter-form__subbmit btn">
+                Get Started For Free
+              </button>
             </form>
           </div>
         </div>
@@ -248,10 +261,10 @@
 
     <!-- MAIN FOOTER -->
     <footer>
-      <div class="container">
-        <div class="main-footer">
+      <div class="main-footer">
+        <div class="container">
           <a href="#" class="logo"
-            >Fylo
+            ><span>Fylo</span>
             <img src="./images/logo.svg" alt="Fylo logo" />
           </a>
           <div class="footer-content">
@@ -263,44 +276,60 @@
               </p>
             </div>
             <div class="footer-contacts">
-              <i class="footer-icon fas fa-phone-square"></i>
-              <span>+1-543-123-4567</span>
-              <i class="fas fa-envelope-square"></i>
-              <span>example@fylo.com</span>
+              <span>
+                <i class="footer-icon fas fa-phone-square"></i>
+                +1-543-123-4567
+              </span>
+              <span>
+                <i class="footer-icon fas fa-envelope-square"></i>
+                example@fylo.com
+              </span>
             </div>
             <div class="footer-nav">
               <ul>
-                <li>About Us</li>
-                <li>Jobs</li>
-                <li>Press</li>
-                <li>Blog</li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Jobs</a></li>
+                <li><a href="#">Press</a></li>
+                <li><a href="#">Blog</a></li>
               </ul>
               <ul>
-                <li>Contact Us</li>
-                <li>Terms</li>
-                <li>Privacy</li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Privacy</a></li>
               </ul>
             </div>
             <div class="footer-socials">
               <ul>
-                <li><i class="fab fa-facebook-f"></i></li>
-                <li><i class="fab fa-twitter"></i></li>
-                <li><i class="fab fa-instagram"></i></li>
+                <li>
+                  <a href="https://www.facebook.com/"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.twitter.com/"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                </li>
               </ul>
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="frontendmentor-footer">
-          <p class="attribution">
-            Challenge by
-            <a
-              href="https://www.frontendmentor.io?ref=challenge"
-              target="_blank"
-              >Frontend Mentor</a
-            >. Coded by <a href="#">Your Name Here</a>.
-          </p>
-        </div>
+      <div class="frontendmentor-footer">
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+            Frontend Mentor
+          </a>
+          <br />
+          Coded by <a href="https://twitter.com/iulianaL1">Iuliana Lupu</a>.
+        </p>
       </div>
     </footer>
   </body>
