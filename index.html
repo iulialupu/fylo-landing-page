@@ -20,7 +20,11 @@
       href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>
       Frontend Mentor | Fylo landing page with dark theme and features grid
     </title>
@@ -44,11 +48,16 @@
         </nav>
         <div class="header-content">
           <img
-            class="header-image"
+            class="header-image wow fadeIn"
+            data-wow-duration="4s"
             src="./images/illustration-intro.png"
             alt=""
           />
-          <h1 class="heading">
+          <h1
+            class="heading wow fadeInUp"
+            data-wow-duration="1s"
+            data-wow-delay="1s"
+          >
             All your files in one secure location, accessible anywhere.
           </h1>
           <p class="text">
@@ -67,7 +76,7 @@
         <div class="container">
           <div class="features-container">
             <!-- 1 -->
-            <div class="feature">
+            <div class="feature wow fadeInLeft">
               <img
                 class="feature__icon"
                 src="images/icon-access-anywhere.svg"
@@ -83,7 +92,7 @@
             </div>
 
             <!-- 2 -->
-            <div class="feature">
+            <div class="feature  wow fadeInRight" data-wow-delay="0.5s">
               <img
                 class="feature__icon"
                 src="images/icon-security.svg"
@@ -98,7 +107,7 @@
             </div>
 
             <!-- 3 -->
-            <div class="feature">
+            <div class="feature  wow fadeInLeft" data-wow-delay="0.3s">
               <img
                 class="feature__icon"
                 src="images/icon-collaboration.svg"
@@ -113,7 +122,7 @@
             </div>
 
             <!-- 4 -->
-            <div class="feature">
+            <div class="feature  wow fadeInRight" data-wow-delay="0.8s">
               <img
                 class="feature__icon"
                 src="images/icon-any-file.svg"
@@ -137,10 +146,15 @@
             <img
               src="images/illustration-stay-productive.png"
               alt=""
-              class="description-image"
+              class="description-image wow fadeIn"
+              data-wow-duration="1s"
+              data-wow-delay="1s"
             />
-            <div class="description-content">
-              <h2 class="heading">
+            <div
+              class="description-content wow fadeInRight"
+              data-wow-delay="0.3s"
+            >
+              <h2 class="heading wow fadeInRight" data-wow-delay="0.7s">
                 Stay productive, wherever you are
               </h2>
               <div class="text">
@@ -155,6 +169,7 @@
                 </p>
               </div>
               <a href="#" class="link">See how Fylo works</a>
+              <span class="line"></span>
             </div>
           </div>
         </div>
@@ -236,7 +251,11 @@
       <!-- NEWSLETTER SECTION -->
       <section class="newsletter-section" id="newsletter-section">
         <div class="container">
-          <div class="newsletter-box">
+          <div
+            class="newsletter-box wow pulse"
+            data-wow-duration="1.5s"
+            data-wow-delay="1s"
+          >
             <h3 class="heading">Get early access today</h3>
             <p class="text-small">
               It only takes a minute to sign up and our free starter tier is
@@ -328,9 +347,15 @@
             Frontend Mentor
           </a>
           <br />
-          Coded by <a href="https://twitter.com/iulianaL1">Iuliana Lupu</a>.
+          Coded with 💕 by
+          <a href="https://twitter.com/iulianaL1">Iuliana Lupu</a>.
         </p>
       </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>

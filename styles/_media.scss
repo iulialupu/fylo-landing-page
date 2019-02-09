@@ -1,0 +1,251 @@
+@media screen and (max-width: 950px) {
+  .logo > img {
+    width: 130px;
+    height: auto;
+  }
+  header {
+    .header-content {
+      width: 65%;
+    }
+  }
+}
+
+//////////////////////////  680  ////////////////////////
+@media screen and (max-width: 680px) {
+  .container {
+    max-width: 88%;
+  }
+  .text,
+  a {
+    font-size: 13px;
+  }
+  .text-small {
+    font-size: 11px;
+  }
+  .heading {
+    line-height: 1.4;
+  }
+
+  header .header-content .heading {
+    margin-bottom: 25px;
+  }
+
+  .features-container {
+    width: 96%;
+  }
+
+  .newsletter-box {
+    padding: 45px 55px;
+    .heading {
+      margin-bottom: 16px;
+    }
+  }
+
+  .footer-content .footer-icon {
+    margin-right: 8px;
+  }
+
+  .footer-content .footer-location {
+    .text-small {
+      padding-left: 28px;
+    }
+  }
+
+  .footer-contacts span {
+    font-size: 13px;
+  }
+}
+
+//////////////////////////  560  //////////////////////////
+@media screen and (max-width: 560px) {
+  header {
+    background: $intro-blue url(../images/bg-curvy-mobile.svg) no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+    .header-nav {
+      .menu {
+        li {
+          margin-left: 22px;
+        }
+      }
+    }
+    .header-content {
+      width: 92%;
+    }
+  }
+  /////////////////////////////////
+  .features-container {
+    width: 87%;
+    grid-template-columns: 1fr;
+    .feature {
+      text-align: center;
+      width: 90%;
+      margin: 43px auto;
+    }
+  }
+  //////////////////////////////////
+  .description-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .description-image {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    .description-content {
+      padding-left: 0;
+      .heading {
+        font-size: 26px;
+      }
+    }
+  }
+  /////////////////////////////////
+  .testimonials-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    &:before {
+      width: 33px;
+      height: 31px;
+      border: 1 px solid red;
+      left: 30px;
+      top: -32px;
+    }
+    .testimonial {
+      width: 85%;
+      margin-bottom: 26px;
+    }
+  }
+  /////////////////////////////////
+  .newsletter-box {
+    width: 100%;
+    padding: 45px 35px;
+    .heading {
+      font-size: 23px;
+      margin-bottom: 20px;
+    }
+    .text-small {
+      width: 100%;
+    }
+    .newsletter-form {
+      width: 100%;
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: 1fr;
+      input {
+        justify-self: stretch;
+        margin: 0 0 20px;
+        display: block;
+        object-fit: contain;
+      }
+      .newsletter-form__subbmit {
+        margin: auto;
+        width: 100%;
+      }
+    }
+  }
+  ////////////////////////////////
+  .main-footer {
+    padding-bottom: 45px;
+  }
+  .footer-content {
+    flex-direction: column;
+    justify-content: space-between;
+    .footer-location {
+      width: 100%;
+    }
+    .footer-contacts {
+      margin-top: 40px;
+    }
+    .footer-nav {
+      margin-top: 14px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      ul {
+        margin: 12px 0;
+        li {
+          margin-bottom: 12px;
+        }
+      }
+    }
+    .footer-socials {
+      display: block;
+      margin: auto;
+      li {
+        &:first-child {
+          margin-left: 0px;
+        }
+      }
+    }
+  }
+  .frontendmentor-footer {
+    padding: 25px;
+  }
+}
+
+///////////////////////////  370  ////////////////////////
+
+@media screen and (max-width: 370px) {
+  header {
+    .header-nav {
+      min-height: 10vh;
+      .menu li {
+        margin-left: 14px;
+        a {
+          font-size: 11px;
+        }
+      }
+    }
+    .header-content {
+      width: 100%;
+    }
+  }
+
+  .logo > img {
+    width: 90px;
+    height: auto;
+  }
+
+  .features-container {
+    width: 100%;
+  }
+
+  .description-container .description-content .heading {
+    padding-right: 0;
+  }
+
+  .testimonials-container {
+    .testimonial {
+      width: 90%;
+      padding: 30px 15px 25px;
+    }
+  }
+
+  .newsletter-box {
+    padding: 45px 25px;
+    .heading {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .newsletter-form {
+      input {
+        padding: 16px 20px;
+        font-size: 14px;
+      }
+      .newsletter-form__subbmit {
+        padding: 16px 8px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .btn {
+    padding: 16px 35px;
+    border-radius: 42px;
+    font-size: 14px;
+  }
+}

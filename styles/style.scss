@@ -7,7 +7,7 @@ $testimonials-blue: hsl(219, 30%, 18%);
 $cyan: hsl(176, 68%, 64%);
 $blue: hsl(198, 60%, 50%);
 
-$btn-gradient: linear-gradient(to right, $cyan, $blue 90%);
+$btn-gradient: linear-gradient(to left, $cyan, $blue, $cyan);
 
 $white: hsl(0, 0%, 100%);
 
@@ -15,7 +15,7 @@ $white: hsl(0, 0%, 100%);
 $raleway-font: "Raleway", sans-serif; // Headings, Call-to-actions, Header Navigation
 $open-sans-font: "Open Sans", sans-serif; // Body
 
-// ------------------------Reset
+// -------------------------Reset-------------------------------
 body,
 html,
 * {
@@ -32,7 +32,7 @@ a {
   text-decoration: none;
 }
 
-// --------------------General Style
+// --------------------General Styles---------------------------
 body {
   color: $white;
   background: $main-blue;
@@ -75,8 +75,21 @@ a {
   border-radius: 50px;
   text-align: center;
   background: $btn-gradient;
+  background-size: 300%;
   border: none;
+  &:hover {
+    animation: hover-btn 3s linear infinite reverse;
+  }
 }
+@keyframes hover-btn {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 300%;
+  }
+}
+
 header,
 section {
   padding-bottom: 125px;
@@ -91,9 +104,24 @@ section {
   }
 }
 
-// FIRST SCREEN. HEADER
+line {
+  width: 10px;
+  height: 1px;
+  background-color: $cyan;
+  transition: width 0.4s;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  display: block;
+}
+a:hover + line {
+  width: 148px;
+}
+///////////////////////////////////////////////////////////////
+/******************** FIRST SCREEN. HEADER *******************/
+
 header {
-  background: $intro-blue url(images/bg-curvy-desktop.svg) no-repeat;
+  background: $intro-blue url(../images/bg-curvy-desktop.svg) no-repeat;
   background-size: contain;
   background-position: bottom center;
 
@@ -108,6 +136,22 @@ header {
       margin-left: auto;
       li {
         margin-left: 55px;
+        position: relative;
+        a:after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          background-color: $cyan;
+          opacity: 0;
+          transition: width 0.3s, opacity 0.01s;
+          margin-top: 2px;
+        }
+        &:hover a:after {
+          width: 100%;
+          opacity: 1;
+        }
       }
     }
   }
@@ -118,8 +162,10 @@ header {
     margin: auto;
     .header-image {
       object-fit: contain;
+      max-width: 720px;
       width: 100%;
       height: auto;
+      max-height: 534px;
     }
     .heading {
       margin-top: 30px;
@@ -131,7 +177,7 @@ header {
   }
 }
 
-//   FEATURES SECTION
+/********************* FEATURES SECTION ************************/
 .features-container {
   width: 87%;
   margin: auto;
@@ -154,7 +200,7 @@ header {
   }
 }
 
-//  DESCRIPTION SECTION
+/********************* DESCRIPTION SECTION  *********************/
 .description-container {
   display: flex;
   align-items: center;
@@ -162,7 +208,9 @@ header {
 
   .description-image {
     width: 50%;
+    max-width: 615px;
     height: auto;
+    max-height: 415px;
   }
 
   .description-content {
@@ -177,14 +225,13 @@ header {
     }
     .link {
       color: $cyan;
-      border-bottom: 1px solid $cyan;
       padding-bottom: 6px;
       display: inline-flex;
       align-items: center;
       transition: 0.3s;
       &:after {
         content: "";
-        background: url(images/icon-arrow.svg);
+        background: url(../images/icon-arrow.svg);
         display: inline-block;
         width: 16px;
         height: 16px;
@@ -195,10 +242,23 @@ header {
         text-shadow: 0 0 4px $cyan;
       }
     }
+    .line {
+      width: 10px;
+      height: 1.5px;
+      background-color: $cyan;
+      transition: width 0.4s;
+      position: relative;
+      bottom: 0;
+      left: 0;
+      display: block;
+    }
+    a:hover + .line {
+      width: 148px;
+    }
   }
 }
 
-//  TESTIMONIALS
+/********************* TESTIMONIALS *********************/
 .testimonials-section {
   padding-bottom: 0px;
 }
@@ -209,18 +269,18 @@ header {
   position: relative;
   &:before {
     content: "";
-    background: url(images/bg-quotes.png) no-repeat;
+    background: url(../images/bg-quotes.png) no-repeat;
     background-size: contain;
     width: 55px;
     height: 52px;
     color: $cyan;
     display: block;
     position: absolute;
-    top: 0;
     left: 0;
     top: -52px;
   }
   .testimonial {
+    box-shadow: 0 0 3px 3px rgba(124, 124, 124, 0.02);
     box-sizing: border-box;
     width: 30%;
     background-color: $testimonials-blue;
@@ -251,7 +311,7 @@ header {
   }
 }
 
-//  NEWSLETTER SECTION
+/********************* NEWSLETTER SECTION *********************/
 .newsletter-section {
   padding-bottom: 0;
 }
@@ -299,7 +359,7 @@ header {
   }
 }
 
-// MAIN FOOTER
+/************************* FOOTER **************************/
 .footer {
   position: fixed;
   bottom: 0;
@@ -308,7 +368,6 @@ header {
   background-color: $footer-blue;
   padding-top: 250px;
   position: relative;
-
   padding-bottom: 85px;
 }
 
@@ -383,3 +442,5 @@ header {
   padding: 40px;
   font-size: 12px;
 }
+
+@import "media";
