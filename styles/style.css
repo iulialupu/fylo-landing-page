@@ -17,14 +17,14 @@ a {
 }
 
 body {
-  color: white;
+  color: #cccccc;
   background: #181f2a;
   line-height: 1.6;
 }
 
 button,
 a {
-  color: white;
+  color: #cccccc;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -497,7 +497,7 @@ header .header-content .btn {
 
 .footer-content .footer-socials li {
   display: inline-block;
-  border: 1px solid white;
+  border: 1px solid #cccccc;
   border-radius: 50%;
   width: 30px;
   height: 30px;
